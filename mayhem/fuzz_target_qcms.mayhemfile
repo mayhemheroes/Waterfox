@@ -1,0 +1,7 @@
+project: Waterfox
+target: fuzz-target-qcms
+
+cmds:
+  - cmd: /fuzz_target_qcms
+  - cmd: /fuzz_target_qcms_no_inst @@
+    libfuzzer: false
