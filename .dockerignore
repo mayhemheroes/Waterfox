@@ -1,0 +1,7 @@
+# Commit-image build context. Keep the FULL repo incl. .git (the grader / PATCH tier
+# need it); drop only local cargo/fuzz build outputs and editor/OS cruft.
+gfx/qcms/fuzz/target/
+**/*.rlib
+*.swp
+*~
+.DS_Store

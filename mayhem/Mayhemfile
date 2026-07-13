@@ -1,0 +1,11 @@
+project: Waterfox
+target: fuzz-target-qcms
+
+# libFuzzer harness over qcms (gfx/qcms) — parses ICC colour profiles from memory and
+# runs colour transforms. Built by mayhem/build.sh → /mayhem/fuzz_target_qcms.
+cmds:
+  - cmd: /mayhem/fuzz_target_qcms
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-target-qcms/testsuite
